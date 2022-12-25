@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "BankKService", "BankKService\", "{D2272E3D-A37F-4D15-B24E-4D31BFB00617}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.7.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_20328"
+		Debug.AspNetCompiler.PhysicalPath = "BankKService\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_20328\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_20328"
+		Release.AspNetCompiler.PhysicalPath = "BankKService\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_20328\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "20328"
+		SlnRelativePath = "BankKService\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D2272E3D-A37F-4D15-B24E-4D31BFB00617}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2272E3D-A37F-4D15-B24E-4D31BFB00617}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {07D38BA2-F027-483D-90D0-F6FE594A7CD7}
+	EndGlobalSection
+EndGlobal
