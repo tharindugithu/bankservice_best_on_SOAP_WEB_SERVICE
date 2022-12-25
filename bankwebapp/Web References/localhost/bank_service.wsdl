@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://tempuri.org/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="DepositMoney">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="accout_balance" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="deposit_money" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DepositMoneyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DepositMoneyResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WithdrawMoney">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="accout_balance" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="withdraw_money" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WithdrawMoneyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="WithdrawMoneyResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TransferMoney">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="accout_balance" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="transfer_money" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TransferMoneyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TransferMoneyResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="DepositMoneySoapIn">
+    <wsdl:part name="parameters" element="tns:DepositMoney" />
+  </wsdl:message>
+  <wsdl:message name="DepositMoneySoapOut">
+    <wsdl:part name="parameters" element="tns:DepositMoneyResponse" />
+  </wsdl:message>
+  <wsdl:message name="WithdrawMoneySoapIn">
+    <wsdl:part name="parameters" element="tns:WithdrawMoney" />
+  </wsdl:message>
+  <wsdl:message name="WithdrawMoneySoapOut">
+    <wsdl:part name="parameters" element="tns:WithdrawMoneyResponse" />
+  </wsdl:message>
+  <wsdl:message name="TransferMoneySoapIn">
+    <wsdl:part name="parameters" element="tns:TransferMoney" />
+  </wsdl:message>
+  <wsdl:message name="TransferMoneySoapOut">
+    <wsdl:part name="parameters" element="tns:TransferMoneyResponse" />
+  </wsdl:message>
+  <wsdl:portType name="bank_serviceSoap">
+    <wsdl:operation name="DepositMoney">
+      <wsdl:input message="tns:DepositMoneySoapIn" />
+      <wsdl:output message="tns:DepositMoneySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WithdrawMoney">
+      <wsdl:input message="tns:WithdrawMoneySoapIn" />
+      <wsdl:output message="tns:WithdrawMoneySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TransferMoney">
+      <wsdl:input message="tns:TransferMoneySoapIn" />
+      <wsdl:output message="tns:TransferMoneySoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="bank_serviceSoap" type="tns:bank_serviceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DepositMoney">
+      <soap:operation soapAction="http://tempuri.org/DepositMoney" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WithdrawMoney">
+      <soap:operation soapAction="http://tempuri.org/WithdrawMoney" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TransferMoney">
+      <soap:operation soapAction="http://tempuri.org/TransferMoney" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="bank_serviceSoap12" type="tns:bank_serviceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DepositMoney">
+      <soap12:operation soapAction="http://tempuri.org/DepositMoney" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WithdrawMoney">
+      <soap12:operation soapAction="http://tempuri.org/WithdrawMoney" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TransferMoney">
+      <soap12:operation soapAction="http://tempuri.org/TransferMoney" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="bank_service">
+    <wsdl:port name="bank_serviceSoap" binding="tns:bank_serviceSoap">
+      <soap:address location="http://localhost:20328/bank_service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="bank_serviceSoap12" binding="tns:bank_serviceSoap12">
+      <soap12:address location="http://localhost:20328/bank_service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
